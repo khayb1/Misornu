@@ -4,6 +4,7 @@ import david from "../assets/images/DAVID.webp";
 import about from "../assets/images/about.png";
 import vision from "../assets/images/vision.png";
 import mission from "../assets/images/mission.png";
+import training from "../assets/images/training.jpg";
 
 const images = {
   logo,
@@ -11,7 +12,8 @@ const images = {
   david,
   about,
   vision,
-  mission
+  mission,
+  training
 };
 
 export default images;
@@ -22,4 +24,5 @@ export {
     david,
     about,
     vision,
-    mission};
+    mission,
+    training};

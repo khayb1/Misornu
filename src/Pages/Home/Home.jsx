@@ -1,15 +1,17 @@
 /** @format */
 import React from "react";
 import Hero from "../../Components/Hero";
-import { david, mission, about, vision } from "../../assets";
+import { david, mission, about, vision,training } from "../../assets";
 import InfoSection from "../../Components/InfoSection";
-
+import Card from "../../Components/Card";
 const Home = () => {
   return (
     <>
       <Hero />
-      <section id="overview" className="flex gap-3 w-[100%] h-[80vh] py-[2rem] overflow-y-hidden">
-      <div className="h-[100%] overflow-y-scroll w-[50%] pl-5 mt-12 flex flex-wrap justify-between p-1  ">
+      <section id="overview" className=" w-[100] h-[80vh] px-[10%] py-[5%] overflow-y-hidden">
+        <h2 className="text-3xl font-bold text-center w-[100%]">Overview</h2>
+        <div className=" flex gap-3 w-[100%] h-[100%]">
+      <div className="h-[100%] overflow-y-auto w-[50%] pl-5 mt-12 flex flex-wrap justify-between p-1 scrollbar-thin scrollbar-thumb-primary scrollbar-track-red-300 ">
       <InfoSection 
       img={about}
       title="About Us"
@@ -30,9 +32,24 @@ const Home = () => {
       {/* image */}
       <div className="w-[50%] h-[100%]">
         <img src={david}
-          className="w-[100%] h-[100%] object-contain" alt="David Misornu"
+          className="w-[100%] h-[100%] object-scale-down object-center" alt="David Misornu"
         />
       </div>
+      </div>
+      </section>
+
+      {/* What we do section  */}
+      <section id="What-we-do" className="mx-[10%] my-[5%]">
+        <h2 className="text-center text-3xl font-bold"> What We Do</h2> 
+        <div className="flex flex-wrap justify-between gap-5">
+        <Card
+        image={training}
+        title="Education & Training"
+        description="Equipping communities with safety tools."
+        buttonText="Know More"
+        link="/gallery"
+      />
+        </div>
       </section>
     </>
   );
