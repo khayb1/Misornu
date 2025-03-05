@@ -1,0 +1,123 @@
+/** @format */
+
+.active {
+    background-color: #1d4ed8;
+    color: #fff;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  nav .title {
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #1d4ed8;
+  }
+  
+  nav ul {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  nav ul.open {
+    display: block;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  nav ul li a:not(.active):hover {
+    background-color: #0232d1;
+    opacity: 0.5;
+    color: #fff;
+  }
+  
+  nav .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+  }
+  
+  nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #222;
+    border-radius: 0.2rem;
+  }
+  .menu.open span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+  }
+  
+  .menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+  }
+  
+  @media (max-width: 800px) {
+    nav .menu {
+      display: flex;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0.25rem;
+      transform: translateY(-100%);
+    }
+  
+    nav ul.open {
+      display: flex;
+      transform: translateY(0);
+    }
+  
+    nav ul li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    nav ul li a {
+      margin: 0.2rem 0.5rem;
+    }
+  }
