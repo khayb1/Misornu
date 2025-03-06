@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <section id="overview" className=" w-[100]  px-[10%] py-[5%] overflow-y-hidden ">
+      <section id="overview" className=" w-[100%] h-fit px-[10%] py-[5%] overflow-y-hidden ">
         <h2 className="text-3xl font-bold text-center w-[100%]">Overview</h2>
         <div className=" flex flex-col md:flex-row md:max-h-[70vh]  w-[100%] h-[100%] overflow-y-hidden gap-10">
      <div className="h-[400px] md:h-full  overflow-y-auto w-full pl-5 mt-12 flex flex-wrap justify-between gap-5">
