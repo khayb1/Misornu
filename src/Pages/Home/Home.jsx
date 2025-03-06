@@ -1,17 +1,17 @@
 /** @format */
 import React from "react";
 import Hero from "../../Components/Hero";
-import { david, mission, about, vision,training } from "../../assets";
+import { david, mission, about, vision,training, collaboration, proactive } from "../../assets";
 import InfoSection from "../../Components/InfoSection";
 import Card from "../../Components/Card";
 const Home = () => {
   return (
     <>
       <Hero />
-      <section id="overview" className=" w-[100] h-[80vh] px-[10%] py-[5%] overflow-y-hidden">
+      <section id="overview" className=" w-[100]  px-[10%] py-[5%] overflow-y-hidden ">
         <h2 className="text-3xl font-bold text-center w-[100%]">Overview</h2>
-        <div className=" flex gap-3 w-[100%] h-[100%]">
-      <div className="h-[100%] overflow-y-auto w-[50%] pl-5 mt-12 flex flex-wrap justify-between p-1 scrollbar-thin scrollbar-thumb-primary scrollbar-track-red-300 ">
+        <div className=" flex flex-col md:flex-row md:max-h-[70vh]  w-[100%] h-[100%] overflow-y-hidden gap-10">
+     <div className="h-[400px] md:h-full  overflow-y-auto w-full pl-5 mt-12 flex flex-wrap justify-between gap-5">
       <InfoSection 
       img={about}
       title="About Us"
@@ -30,20 +30,34 @@ const Home = () => {
       </div>
 
       {/* image */}
-      <div className="w-[50%] h-[100%]">
+      <div className="w-full h-full flex-grow-1">
         <img src={david}
-          className="w-[100%] h-[100%] object-scale-down object-center" alt="David Misornu"
+          className="w-full h-full object-cover rotate-y-180 object-center" alt="David Misornu"
         />
       </div>
       </div>
       </section>
 
       {/* What we do section  */}
-      <section id="What-we-do" className="mx-[10%] my-[5%]">
-        <h2 className="text-center text-3xl font-bold"> What We Do</h2> 
-        <div className="flex flex-wrap justify-between gap-5">
+      <section id="What-we-do" className="px-[10%] py-[5%] bg-gray-100 overflow-x-hidden">
+        <h2 className="text-center text-3xl font-bold pb-5"> What We Do</h2> 
+        <div className=" flex flex-col md:flex-row flex-wrap gap-5 justify-between ">
         <Card
         image={training}
+        title="Education & Training"
+        description="Equipping communities with safety tools."
+        buttonText="Know More"
+        link="/gallery"
+      />
+       <Card
+        image={collaboration}
+        title="Collaboration & Partnerships"
+        description="Building strong safety partnerships."
+        buttonText="Know More"
+        link="/gallery"
+      />
+       <Card
+        image={proactive}
         title="Education & Training"
         description="Equipping communities with safety tools."
         buttonText="Know More"

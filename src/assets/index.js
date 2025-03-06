@@ -5,7 +5,8 @@ import about from "../assets/images/about.png";
 import vision from "../assets/images/vision.png";
 import mission from "../assets/images/mission.png";
 import training from "../assets/images/training.jpg";
-
+import collaboration from "../assets/images/collaboration.webp";
+import proactive from "../assets/images/proactive.webp";
 const images = {
   logo,
   hero,
@@ -13,7 +14,10 @@ const images = {
   about,
   vision,
   mission,
-  training
+  training,
+  proactive,
+  collaboration
+  
 };
 
 export default images;
@@ -25,4 +29,7 @@ export {
     about,
     vision,
     mission,
-    training};
+    training,
+    proactive,
+    collaboration
+  };

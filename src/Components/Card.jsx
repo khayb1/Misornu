@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-
+import './Btn.css'
 const Card = ({ image, title, description, buttonText, link }) => {
   return (
-    <div className="w-full max-w-sm bg-white shadow-lg rounded-2xl overflow-hidden">
+    <div className="flex-1 max-w-[400px] text-center pb-2 border border-gray-300 rounded-lg shadow-md bg-white overflow-hidden">
       {/* Image - Takes 70% of the card height */}
-      <div className="h-[70%]">
-        <img src={image} alt={title} className="w-full h-full object-cover" />
+      <div className="max-h-[250px] w-full overflow-hidden">
+        <img src={image} alt={title} className="w-full h-full object-fit" />
       </div>
 
       {/* Content Section */}
-      <div className="p-4 flex flex-col items-center">
+      <div className="p-4 flex flex-col items-center ">
         {/* Header */}
         <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
 
@@ -20,7 +20,7 @@ const Card = ({ image, title, description, buttonText, link }) => {
         {/*  Button */}
         <Link
           to={link}
-          className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center"
+          className="hero-btn mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center"
         >
           {buttonText}
         </Link>
