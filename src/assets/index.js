@@ -7,6 +7,11 @@ import mission from "../assets/images/mission.png";
 import training from "../assets/images/training.jpg";
 import collaboration from "../assets/images/collaboration.webp";
 import proactive from "../assets/images/proactive.webp";
+import champion from "../assets/images/champion.png";
+import award1 from "../assets/images/gallery/awards/award1.jpeg"
+import award2 from "../assets/images/gallery/awards/award2.jpeg";
+import award3 from "../assets/images/gallery/awards/award3.jpeg";
+;
 const images = {
   logo,
   hero,
@@ -16,8 +21,13 @@ const images = {
   mission,
   training,
   proactive,
-  collaboration
-  
+  collaboration,
+  champion,
+
+  // awards 
+  award1,
+  award2,
+  award3
 };
 
 export default images;
@@ -31,5 +41,9 @@ export {
     mission,
     training,
     proactive,
-    collaboration
+    collaboration,
+    champion,
+    award1,
+    award2,
+    award3
   };

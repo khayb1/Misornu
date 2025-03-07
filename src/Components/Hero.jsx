@@ -12,7 +12,7 @@ const Hero = () => {
             <span>YOU NEED</span>
         </h1>
         <Button
-        to="#overview"
+        to="/blog"
         text="Contact Us" />
       </div>
     </main>
