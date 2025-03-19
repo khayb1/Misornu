@@ -14,7 +14,7 @@ function NavList() {
     <ul className=" flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
-        variant="h5"
+        variant="h4"
         color="blue-gray"
         className="p-1 font-lg"
       >
@@ -24,9 +24,9 @@ function NavList() {
       </Typography>
       <Typography
         as="li"
-        variant="small"
+        variant="h4"
         color="blue-gray"
-        className="p-1 font-larger text-[1rem]"
+         className="p-1 font-lg"
       >
         <a href="/blog" className="flex items-center text-blue-700 hover:text-blue-500 transition-colors">
           Blog
@@ -34,9 +34,9 @@ function NavList() {
       </Typography>
       <Typography
         as="li"
-        variant="small"
+        variant="h4"
         color="blue-gray"
-        className="p-1 font-larger text-[1rem]"
+        className="p-1 font-lg"
       >
         <a href="/contact" className="flex items-center text-blue-700 hover:text-blue-500 transition-colors">
           Contact
@@ -44,9 +44,9 @@ function NavList() {
       </Typography>
       <Typography
         as="li"
-        variant="small"
+        variant="h4"
         color="blue-gray"
-        className="p-1 font-larger text-[1rem]"
+         className="p-1 font-lg"
       >
         <a href="#" className="flex items-center text-blue-700 hover:text-blue-500 transition-colors">
           Docs
