@@ -11,7 +11,7 @@ import champion from "../assets/images/champion.png";
 import award1 from "../assets/images/gallery/awards/award1.jpeg"
 import award2 from "../assets/images/gallery/awards/award2.jpeg";
 import award3 from "../assets/images/gallery/awards/award3.jpeg";
-;
+import Flogo from "../assets/images/Flogo.png";
 const images = {
   logo,
   hero,
@@ -23,6 +23,7 @@ const images = {
   proactive,
   collaboration,
   champion,
+  Flogo,
 
   // awards 
   award1,
@@ -45,5 +46,6 @@ export {
     champion,
     award1,
     award2,
-    award3
+    award3,
+    Flogo
   };

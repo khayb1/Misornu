@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import './Btn.css'
+
 const Card = ({ image, title, description, buttonText, link }) => {
   return (
     <div className="relative flex-1 max-w-[400px] h-auto text-center pb-2 border border-gray-300 rounded-lg shadow-md bg-white overflow-hidden">
