@@ -8,27 +8,53 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import {logo} from '../assets/index.js';
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import {motion} from 'framer-motion';
 
-function NavList() {
+const ContainerVariant ={
+  hidden: { opacity: 1, y: -60 },
+  visible:{opacity: 1, y: 0,
+    transition:{type: 'spring', duration: 2, stiffness: 120},
+    whileHover:{scale: 1.1,}
+
+  }
+
+}
+
+function NavList({ setOpenNav }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleScroll = (e, id) => {
-    e.preventDefault();
-    if (location.pathname !== '/') {
-      navigate('/');
-      // Wait for navigation to complete before scrolling
+  const MotionNavLink = motion.create(NavLink);
+ 
+
+  const handleScroll = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/");
       setTimeout(() => {
-        const element = document.getElementById(id);
+        const element = document.getElementById(sectionId);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          const navbarHeight = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
         }
+        setOpenNav(false); // Close menu after navigation
       }, 100);
     } else {
-      const element = document.getElementById(id);
+      const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        const navbarHeight = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
       }
+      setOpenNav(false); // Close menu after navigation
     }
   };
 
@@ -39,75 +65,96 @@ function NavList() {
         variant="h4"
         className="p-1 font-lg"
       >
-        <a 
+        <motion.a 
+          variants={ContainerVariant}
+          initial="hidden"
+          animate="visible"
           href="#overview"
-          onClick={(e) => handleScroll(e, 'overview')}
-          className="flex items-center text-blue-700 hover:text-blue-500 transition-colors"
+          onClick={(e) => handleScroll('overview')}
+          className="flex items-center text-blue-700 hover:text-blue-500  transition-colors duration-300 w-fit"
         >
           Overview
-        </a>
+        </motion.a>
       </Typography>
       <Typography
         as="li"
         variant="h4"
         className="p-1 font-lg"
       >
-        <a 
+        <motion.a 
+          variants={ContainerVariant}
+          initial="hidden"
+          animate="visible"
           href="#faqs"
-          onClick={(e) => handleScroll(e, 'faqs')}
-          className="flex items-center text-blue-700 hover:text-blue-500 transition-colors"
+          onClick={(e) => handleScroll('faqs')}
+          className="flex items-center text-blue-700 hover:text-blue-500  transition-colors duration-300 w-fit"
         >
           FAQs
-        </a>
+        </motion.a>
       </Typography>
       <Typography
         as="li"
         variant="h4"
         className="p-1 font-lg"
       >
-        <a 
+        <motion.a 
+          variants={ContainerVariant}
+          initial="hidden"
+          animate="visible"
           href="#awards"
-          onClick={(e) => handleScroll(e, 'awards')}
-          className="flex items-center text-blue-700 hover:text-blue-500 transition-colors"
+          onClick={(e) => handleScroll('awards')}
+          className="flex items-center text-blue-700 hover:text-blue-500 transition-colors duration-300 w-fit"
         >
           Awards
-        </a>
+        </motion.a>
       </Typography>
       <Typography
         as="li"
         variant="h4"
         className="p-1 font-lg"
       >
-        <NavLink 
-          to="/gallery" 
-          className="flex items-center text-blue-700 hover:text-blue-500 transition-colors"
-        >
-          Gallery
-        </NavLink>
+        <MotionNavLink
+      to="/gallery"
+      onClick={() => setOpenNav(false)}
+      variants={ContainerVariant}
+      initial="hidden"
+      animate="visible"
+      className="flex items-center text-blue-700 hover:text-blue-500  transition-colors duration-300 w-fit"
+    >
+      Gallery
+    </MotionNavLink>
       </Typography>
       <Typography
         as="li"
         variant="h4"
         className="p-1 font-lg"
       >
-        <NavLink 
-          to="/blog" 
-          className="flex items-center text-blue-700 hover:text-blue-500 transition-colors"
-        >
-          Blog
-        </NavLink>
+       <MotionNavLink
+      to="/blog"
+      onClick={() => setOpenNav(false)}
+      variants={ContainerVariant}
+      initial="hidden"
+      animate="visible"
+      className="flex items-center text-blue-700 hover:text-blue-500 transition-colors duration-300 w-fit"
+    >
+      Blog
+    </MotionNavLink>
       </Typography>
       <Typography
         as="li"
         variant="h4"
         className="p-1 font-lg"
       >
-        <NavLink 
-          to="/contact" 
-          className="flex items-center text-blue-700 hover:text-blue-500 transition-colors"
-        >
-          Contact
-        </NavLink>
+        <MotionNavLink
+      to="/contact"
+      onClick={() => setOpenNav(false)}
+      variants={ContainerVariant}
+      initial="hidden"
+      animate="visible"
+      className="flex items-center text-blue-700 hover:text-blue-500 transition-colors duration-300 w-fit"
+    >
+      Contact
+    </MotionNavLink>
       </Typography>
     </ul>
   );
@@ -129,7 +176,11 @@ export function NavBar() {
  
   return (
     <Navbar className="px-6 py-1 sticky top-0 z-50">
-      <div className="flex items-center justify-between text-blue-gray-900">
+      <motion.div
+      variants={ContainerVariant}
+      initial="hidden"
+      animate="visible"
+      className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as={NavLink}
           to="/"
@@ -139,7 +190,7 @@ export function NavBar() {
           <img src={logo} alt='logo' className="md:w-[200px] md:h-[70px] w-[150px] h-[60px]" />
         </Typography>
         <div className="hidden lg:block">
-          <NavList />
+          <NavList setOpenNav={setOpenNav} />
         </div>
         <IconButton
           variant="text"
@@ -153,9 +204,9 @@ export function NavBar() {
             <Bars3Icon className="text-blue-700 h-8 w-8" strokeWidth={2} />
           )}
         </IconButton>
-      </div>
+      </motion.div>
       <Collapse open={openNav}>
-        <NavList />
+        <NavList setOpenNav={setOpenNav} />
       </Collapse>
     </Navbar>
   );

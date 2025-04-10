@@ -1,7 +1,7 @@
 /** @format */
 import React from "react";
 import Hero from "../../Components/Hero";
-import { david, training, collaboration, proactive, award1, award2, award3 } from "../../assets";
+import { david, Mis8, award1, award2, award3, Img1, Mis9 } from "../../assets";
 import InfoSection from "../../Components/InfoSection";
 import Card from "../../Components/Card";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -10,6 +10,8 @@ import "./Home.css";
 import { FAQ } from "../../Components/FAQ";
 import { faqData1, faqData2 } from "../../assets/data/faqData";
 import Form from "../../Components/Form";
+
+
 
 const Home = () => {
   return (
@@ -44,8 +46,8 @@ const Home = () => {
           </div>
 
           {/* Image container */}
-          <div className="md:w-[50%]  flex items-center justify-center">
-            <div className="w-[70%] aspect-[3/4]  rounded-lg overflow-hidden ">
+          <div className="md:w-[50%] flex items-center justify-center">
+            <div className="w-[70%] aspect-[3/4] rounded-lg overflow-hidden">
               <img
                 src={david}
                 className="w-full h-full object-contain object-center scale-x-[-1]"
@@ -61,21 +63,21 @@ const Home = () => {
         <h2 className="text-center text-3xl font-bold pb-5"> What We Do</h2> 
         <div className=" flex flex-col md:flex-row flex-wrap gap-5 justify-between ">
         <Card
-        image={training}
+        image={Img1}
         title="Education & Training"
         description="Equipping communities with safety tools."
         buttonText="Know More"
         link="/gallery"
       />
        <Card
-        image={collaboration}
+        image={Mis8}
         title="Collaboration & Partnerships"
         description="Building strong safety partnerships."
         buttonText="Know More"
         link="/gallery"
       />
        <Card
-        image={proactive}
+        image={Mis9}
         title="Education & Training"
         description="Equipping communities with safety tools."
         buttonText="Know More"
@@ -118,7 +120,8 @@ const Home = () => {
           {/* map  */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-3">
           <div className="md:w-[50%] w-[100%] h-[450px]"> 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3333.974915351891!2d-0.194285!3d5.748200000000001!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwNDQnNTMuNiJOIDDCsDExJzMzLjIiVw!5e1!3m2!1sen!2sgh!4v1742480300358!5m2!1sen!2sgh" className="w-full h-full" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7939.512356558922!2d-0.194285!3d5.748200000000001!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwNDQnNTMuNiJOIDDCsDExJzMzLjIiVw!5e0!3m2!1sen!2sgh!4v1742897881633!5m2!1sen!2sgh" className="w-full h-full"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
           </div>
           <div className="md:w-[45%] w-[100%] bg-blue-100 p-5 rounded-lg shadow-lg"  >
             <h4 className="text-2xl font-bold text-center mb-5">Contact us</h4>

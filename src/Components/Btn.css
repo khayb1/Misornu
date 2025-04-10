@@ -19,5 +19,5 @@
   
   .hero-btn:hover{
     box-shadow: 0 0 0 #2681e2, 0 8px 10px rgba(0, 0, 0, 0.2);
-    scale:0.9;
+    scale:1.05 ;
   }
