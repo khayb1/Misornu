@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import "./App.css";
-import { Home, Gallery, Blog, NotFound, Contact } from "./Pages/index.js";
-import Footer from "./Components/Footer";
+import { Home, Gallery, Blog, NotFound, Contact,Signup, Login, Logout, UploadBlog, SingleBlog } from "./Pages/index.js";
+import Footer from "./Components/Footer.jsx";
 import { NavBar } from "./Components/NavBar.jsx";
 import ScrollToTop from "./Components/ScrollToTop.jsx";
 import Socials from "./Components/Socials.jsx";
-import Loader from "./Components/Loader"; 
+import Loader from "./Components/Loader.jsx"; 
+import PrivateRoute from "./Components/PrivateRoute.jsx";
 
 // Layout component that includes the common elements
 const Layout = () => {
@@ -31,7 +32,13 @@ const routes = [
       { path: "/gallery", element: <Gallery /> },
       { path: "/blog", element: <Blog /> },
       { path: "/contact", element: <Contact /> },
-      { path: "*", element: <NotFound /> },
+      { path: "/signup", element: <Signup /> },
+      { path: "/login", element: <Login /> },
+      { path: "/logout", element: <Logout /> },
+      { path: "/upload", element: <PrivateRoute><UploadBlog /></PrivateRoute> },
+      {path:"/blog", element:<Blog />},
+      {path:"/blogs/:id", element:<SingleBlog />},
+      { path: "*", element: <NotFound /> }
     ],
   },
 ];
@@ -42,7 +49,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000); // 2.5s loader
+    const timer = setTimeout(() => setLoading(false), 1000); 
     return () => clearTimeout(timer);
   }, []);
 

@@ -1,35 +1,29 @@
 import { motion } from "framer-motion";
-import {logo} from '../assets/index.js';
 
 const Loader = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white">
+      {/* Spinner */}
       <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: [1, 1.5, 1] }}
+        className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full"
+        animate={{ rotate: 360 }}
         transition={{
           repeat: Infinity,
-          duration: 1.5,
-          ease: "easeInOut",
+          ease: "linear",
+          duration: 1,
         }}
-        className="text-4xl font-bold text-blue-600"
-      >
-        <img
-        src={logo}
-        alt="logo"
-        width={100}
-        height={100}
-        />
-      </motion.div>
+      />
 
+      {/* Loading text */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1, 0] }}
         transition={{
           repeat: Infinity,
           duration: 2,
+          ease: "easeInOut",
         }}
-        className="text-sm mt-4 text-gray-500"
+        className="text-sm mt-8 text-gray-500"
       >
         Loading...
       </motion.p>

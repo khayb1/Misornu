@@ -9,10 +9,14 @@ const MainHeader = ({ title = "Welcome" }) => {
 
   return (
     <div className="relative h-[40vh] w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${hero})` }}>
-      <div className="absolute inset-0 bg-[rgba(10,10,10,0.3)]"></div>
+      <div className="absolute inset-0 bg-[rgba(10,10,10,0.4)]"></div>
+
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-white px-4">
+        {/* Title */}
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">{title}</h1>
+
         {/* Breadcrumbs */}
-        <div className="absolute top-4 left-4 flex items-center space-x-2 text-sm">
+        <div className="flex items-center space-x-2 text-lg md:text-xl">
           <NavLink to="/" className="hover:text-blue-400 transition-colors">
             Home
           </NavLink>
@@ -37,9 +41,6 @@ const MainHeader = ({ title = "Welcome" }) => {
             );
           })}
         </div>
-        
-        {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">{title}</h1>
       </div>
     </div>
   )

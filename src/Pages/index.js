@@ -3,3 +3,8 @@ export {default as Gallery} from './Gallery/Gallery.jsx';
 export {default as Blog} from './Blog/Blog.jsx';
 export {default as Contact} from './Contact/Contact.jsx';
 export {default as NotFound} from './NotFound/NotFound.jsx';     
+export {default as Signup} from './Signup.jsx';
+export {default as Login} from './Login.jsx';
+export {default as Logout} from './Logout.jsx';
+export {default as UploadBlog} from './UploadBlog.jsx';
+export {default as SingleBlog} from './Blog/SingleBlog.jsx';
