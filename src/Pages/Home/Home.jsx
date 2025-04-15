@@ -67,21 +67,26 @@ const Home = () => {
         title="Education & Training"
         description="Equipping communities with safety tools."
         buttonText="Know More"
-        link="/gallery"
+        popoverHeader="Education & Training"
+        popoverText="We provide comprehensive programs and training focused on crime prevention, safety best practices, and community mediation. By equipping individuals and organizations with the necessary tools, we promote a Safety First mindset at every level."
       />
        <Card
         image={Mis8}
         title="Collaboration & Partnerships"
         description="Building strong safety partnerships."
         buttonText="Know More"
-        link="/gallery"
+        popoverHeader="Collaboration & Partnerships"
+        popoverText="Our approach emphasizes collaboration with key stakeholders to foster strong partnerships. We believe that safety is a shared responsibility, and by encouraging open communication, we ensure a united front in addressing local and regional safety issue"
+        
       />
        <Card
         image={Mis9}
         title="Education & Training"
         description="Equipping communities with safety tools."
         buttonText="Know More"
-        link="/gallery"
+        popoverHeader="Proactive Engagement"
+        popoverText="We are dedicated to building safer communities by actively engaging with individuals and organizations. Through hands-on initiatives and tailored interventions, we work to create environments where safety is prioritized, and communities can thrive without fear."
+    
       />
         </div>
       </section>

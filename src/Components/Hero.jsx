@@ -9,7 +9,6 @@ const ContainerVariant = {
   visible: { opacity: 1, x: '0',
     transition: {
       duration: 0.5,
-      type: 'spring',
       stiffness: 120,
     }
    }
@@ -30,7 +29,7 @@ const Hero = () => {
             <span>YOU NEED</span>
         </motion.h1>
         <Button
-          to="/blog"
+          to="/contact"
           text="Contact Us" 
         />
       </div>
