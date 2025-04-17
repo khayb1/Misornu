@@ -4,6 +4,8 @@ import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import MainHeader from "../../Components/MainHeader";
 import Loader from "../../Components/Loader";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -33,8 +35,20 @@ const Blog = () => {
     return <div className="text-center mt-10 text-xl font-semibold"><Loader/></div>;
   }
 
+
+  const stripHtml = (html) => {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = html;
+    return tempDiv.textContent || tempDiv.innerText || "";
+  };
+  
   return (
     <>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Blog - Misornu</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
       <MainHeader />
 
     <div className=" mx-10 mt-10 p-6">
@@ -55,8 +69,11 @@ const Blog = () => {
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{blog.title}</h3>
                 <p className="text-gray-600 text-sm">
-                  {blog.content.length > 100 ? blog.content.substring(0, 100) + "..." : blog.content}
+                  {stripHtml(blog.content).length > 100
+                    ? stripHtml(blog.content).substring(0, 100) + "..."
+                    : stripHtml(blog.content)}
                 </p>
+
               </div>
             </div>
           </Link>

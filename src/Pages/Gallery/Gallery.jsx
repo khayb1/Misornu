@@ -7,6 +7,7 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
+import { Helmet } from "react-helmet";
 
 const Gallery = () => {
   const [activeTab, setActiveTab] = useState("All");
@@ -20,6 +21,11 @@ const Gallery = () => {
 
   return (
     <>
+     <Helmet>
+      <meta charSet="utf-8" />
+      <title>Gallery - Misornu</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
       <MainHeader title="Gallery" />
 
       {/* Tabs */}

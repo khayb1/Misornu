@@ -5,7 +5,7 @@ import { db } from "../../firebaseConfig";
 import Loader from "../../Components/Loader";
 import { Link } from "react-router-dom";
 import '../../Components/Hero.css'
-
+import { Helmet } from "react-helmet";
 
 
 const SingleBlog = () => {
@@ -42,18 +42,27 @@ const SingleBlog = () => {
   }
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-6">
+    
+    <>
+     <Helmet>
+      <meta charSet="utf-8" />
+      <title>{blog.title} - Misornu</title>
+      <link rel="canonical" href="http://misornu.vercel.app/blog/" />
+    </Helmet>
+        <div className="max-w-3xl mx-auto mt-10 p-6">
       {blog.imageUrl && (
         <img
           src={blog.imageUrl}
           alt={blog.title}
-          className="w-full h-72 object-cover rounded-lg mb-6"
+          className="w-96 mx-auto  h-96 object-fit rounded-lg mb-6"
         />
       )}
       <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
-      <p className="text-gray-700 leading-relaxed">{blog.content}</p>
+      <p className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.content }} />
       <Link to="/blog" className="text-blue-500 hero-btn w-fit mt-4 block">Back to Blogs</Link>
     </div>
+    </>
+
   );
 };
 

@@ -1,8 +1,16 @@
-import React from 'react'
 
+import { Helmet } from 'react-helmet';
+import MainHeader from '../../Components/MainHeader';
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+     <Helmet>
+      <meta charSet="utf-8" />
+      <title>Blog - Misornu</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
+    <MainHeader />
+    </>
   )
 }
 

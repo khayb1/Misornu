@@ -1,12 +1,27 @@
-import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp, FaYoutube } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
 
+const ContainerVariant = {
+  hidden: { opacity: 0, x:'-100vw' },
+  visible: { opacity: 1, x: '0',
+    transition: {
+      duration: 0.5,
+      stiffness: 120,
+    }
+   }
+ 
+};
 
 const Socials = () => {
   return (
    <>
-        <div className="flex justify-end items-end md:flex-col md:items-center md:fixed md:left-0 md:top-50 z-50 bg-blue-100">
-        <a 
+        <motion.div 
+         variants={ContainerVariant}
+         initial="hidden"
+         animate="visible"
+        
+            className="flex justify-end items-end md:flex-col md:items-center md:fixed md:left-0 md:top-50 z-50 bg-blue-100">
+          <a 
                         href="https://facebook.com" 
                         target="_blank" 
                         rel="noopener noreferrer" 
@@ -46,7 +61,7 @@ const Socials = () => {
                       >
                         <FaLinkedin size={30}/>
                       </a>
-        </div>
+        </motion.div>
    </>
   )
 }

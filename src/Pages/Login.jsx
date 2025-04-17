@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '../firebaseConfig';
 import MainHeader from '../Components/MainHeader';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -31,6 +32,11 @@ const Login = () => {
 
   return (
     <>
+     <Helmet>
+      <meta charSet="utf-8" />
+      <title>Login - Misornu</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
       <MainHeader />
       <div className="flex justify-center m-10">
         <div className="w-full max-w-md p-8 bg-gray-100 rounded-lg shadow-md">

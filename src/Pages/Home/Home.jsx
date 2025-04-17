@@ -10,12 +10,18 @@ import "./Home.css";
 import { FAQ } from "../../Components/FAQ";
 import { faqData1, faqData2 } from "../../assets/data/faqData";
 import Form from "../../Components/Form";
+import { Helmet } from "react-helmet";
 
 
 
 const Home = () => {
   return (
-    <>
+    <>  
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Home - Misornu</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
       <Hero />
 
       {/* overview section  */}
