@@ -119,9 +119,9 @@ const Home = () => {
         <section id="awards" className="w-full px-[10%] py-[5%] bg-white flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold text-center mb-5">Awards & Recognition</h2>
             <div className="flex w-fit overflow-x-scroll md:overflow-hidden md:flex-row gap-2 px-3 md:px-0">
-              <img className="w-[80%] md:w-[32%] border-2 b object-cover rounded-lg" src={award1} alt='award1' />
-              <img className="w-[80%] md:w-[32%] border-2 b object-cover rounded-lg" src={award2} alt='award2' />
-              <img className="w-[80%] md:w-[32%] border-2 b object-cover rounded-lg" src={award3} alt='award3' />
+              <img className="w-[80%] md:w-[32%] border-1  object-cover rounded-lg" src={award1} alt='award1' />
+              <img className="w-[80%] md:w-[32%] border-1  object-cover rounded-lg" src={award2} alt='award2' />
+              <img className="w-[80%] md:w-[32%] border-1  object-cover rounded-lg" src={award3} alt='award3' />
             </div>
           <a className="hero-btn mx-auto mt-5" href="https://www.graphic.com.gh/news/general-news/ghana-news-national-cadet-corps-congratulates-dcop-david-eklu.html">Read More</a>
         </section>

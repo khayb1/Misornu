@@ -36,7 +36,7 @@ export function FAQ({ items }) {
         >
           <AccordionHeader 
             onClick={() => handleOpen(index)} 
-            className=" px-4 py-3 text-[1rem] font-semibold text-white bg-blue-500 hover:bg-blue-400 transition-all rounded-t-lg"
+            className=" px-4 py-3 text-[1rem] font-semibold text-black bg-gray-200 hover:bg-gray-100 transition-all rounded-t-lg"
           >
             {item.question}
           </AccordionHeader>
