@@ -58,12 +58,12 @@ const Blog = () => {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog) => (
              <Link to={`/blogs/${blog.id}`} key={blog.id}>
-               <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+               <div className="bg-white rounded-lg shadow-2xl  overflow-hidden hover:shadow-lg transition-shadow duration-300">
                  {blog.imageUrl && (
                 <img
                   src={blog.imageUrl}
                   alt={blog.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover object-[100%_10%]"
                 />
               )}
               <div className="p-4">

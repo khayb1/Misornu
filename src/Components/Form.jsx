@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Btn.css";
@@ -98,7 +98,7 @@ function Form() {
         theme="light"
       />
       
-      <form onSubmit={onSubmit} className="w-full max-w-md mx-auto space-y-4">
+      <form onSubmit={onSubmit} className="w-full max-w-md mx-auto space-y-4 ">
         <div className="relative">
           <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
           <input 

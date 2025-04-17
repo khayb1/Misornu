@@ -7,6 +7,7 @@ const ContainerVariant = {
     transition: {
       duration: 0.5,
       stiffness: 120,
+      delay: 0.5,
     }
    }
  
@@ -19,48 +20,54 @@ const Socials = () => {
          variants={ContainerVariant}
          initial="hidden"
          animate="visible"
+        //  whileHover={{ scale: 1.1 }}
         
-            className="flex justify-end items-end md:flex-col md:items-center md:fixed md:left-0 md:top-50 z-50 bg-blue-100">
-          <a 
+            className="flex justify-end items-end md:flex-col md:items-center md:fixed md:left-0 md:top-50 z-50 bg-gray-100">
+          <motion.a 
+                        whileHover={{ scale: 1.1 }}
                         href="https://facebook.com" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-blue-500 transition-colors border-none md:border-2 border-black p-2 "
                       >
                         <FaFacebook size={30} />
-                      </a>
-                      <a 
+                      </motion.a>
+                      <motion.a 
+                       whileHover={{ scale: 1.1 }}
                         href="https://wa.me/233201240091" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-green-500 transition-colors  border-none md:border-2 border-black p-2"
                       >
                         <FaWhatsapp size={30} />
-                      </a>
-                      <a 
+                      </motion.a>
+                      <motion.a 
+                       whileHover={{ scale: 1.1 }}
                         href="https://instagram.com" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-pink-500 transition-colors border-none md:border-2 border-black p-2 "
                       >
                         <FaInstagram size={30}/>
-                      </a>
-                      <a 
+                      </motion.a>
+                      <motion.a
+                       whileHover={{ scale: 1.1 }} 
                         href="https://youtube.com" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-red-500 transition-colors border-none md:border-2 border-black p-2 "
                       >
                         <FaYoutube size={30}/>
-                      </a>
-                      <a 
+                      </motion.a>
+                      <motion.a 
+                       whileHover={{ scale: 1.1 }}
                         href="https://linkedin.com" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-blue-500 transition-colors border-none md:border-2 border-black p-2 "
                       >
                         <FaLinkedin size={30}/>
-                      </a>
+                      </motion.a>
         </motion.div>
    </>
   )

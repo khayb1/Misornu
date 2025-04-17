@@ -1,5 +1,4 @@
 /** @format */
-import React from "react";
 import Hero from "../../Components/Hero";
 import { david, Mis8, award1, award2, award3, Img1, Mis9 } from "../../assets";
 import InfoSection from "../../Components/InfoSection";
@@ -65,7 +64,7 @@ const Home = () => {
       </section>
 
       {/* What we do section  */}
-      <section id="What-we-do" className="px-[10%] py-[5%] bg-blue-100 overflow-x-hidden">
+      <section id="What-we-do" className="px-[10%] py-[5%] bg-gray-100 overflow-x-hidden">
         <h2 className="text-center text-3xl font-bold pb-5"> What We Do</h2> 
         <div className=" flex flex-col md:flex-row flex-wrap gap-5 justify-between ">
         <Card
@@ -106,16 +105,18 @@ const Home = () => {
         </section>
 
         {/* FAQ section */}
-        <section className="w-full h-fit px-[10%] py-[5%]" id="faqs">
+        <section className="w-full h-fit px-[10%] my-[5%]   " id="faqs">
           <h2 className="text-3xl font-bold text-center mb-5">Frequently Asked Questions</h2>
           <div className="flex flex-col md:flex-row gap-4">
           <FAQ items={faqData1} />
           <FAQ items={faqData2} />
         </div>
+        <div className="mt-10 pt-6 border-t border-gray-700"></div>
         </section>
+        
 
         {/* Award section */}
-        <section id="awards" className="w-full px-[10%] py-[5%] bg-blue-100 flex flex-col items-center justify-center">
+        <section id="awards" className="w-full px-[10%] py-[5%] bg-white flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold text-center mb-5">Awards & Recognition</h2>
             <div className="flex w-fit overflow-x-scroll md:overflow-hidden md:flex-row gap-2 px-3 md:px-0">
               <img className="w-[80%] md:w-[32%] border-2 b object-cover rounded-lg" src={award1} alt='award1' />
@@ -127,15 +128,15 @@ const Home = () => {
 
         
         {/* Contact section  */}
-        <section className="w-full h-fit px-[10%] py-[5%] bg-white" id="contact">
+        <section className="w-full h-fit px-[10%] py-[5%] bg-gray-100" id="contact">
           {/* map  */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-3">
           <div className="md:w-[50%] w-[100%] h-[450px]"> 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7939.512356558922!2d-0.194285!3d5.748200000000001!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwNDQnNTMuNiJOIDDCsDExJzMzLjIiVw!5e0!3m2!1sen!2sgh!4v1742897881633!5m2!1sen!2sgh" className="w-full h-full"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7939.512356558922!2d-0.194285!3d5.748200000000001!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwNDQnNTMuNiJOIDDCsDExJzMzLjIiVw!5e0!3m2!1sen!2sgh!4v1742897881633!5m2!1sen!2sgh" className="w-full h-full"  allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           
           </div>
-          <div className="md:w-[45%] w-[100%] bg-blue-100 p-5 rounded-lg shadow-lg"  >
-            <h4 className="text-2xl font-bold text-center mb-5">Contact us</h4>
+          <div className="md:w-[45%] w-[100%] bg-white p-5 rounded-lg shadow-lg"  >
+            <h4 className="text-3x`xl font-bold text-center mb-5">Contact us</h4>
             <p className="text-center text-gray-500 mb-5">We work with ambitious leaders who want to define the future, not hide from it.</p>
           <Form />  
           </div>

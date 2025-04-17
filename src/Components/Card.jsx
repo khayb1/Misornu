@@ -22,7 +22,7 @@ const Card = ({ image, title, description, buttonText, popoverText, popoverHeade
       <div className="relative flex-1 max-w-[400px] text-center pb-2 border border-gray-300 rounded-lg shadow-md bg-white/7 overflow-hidden">
         {/* Image */}
         <div className="h-[250px] w-full overflow-hidden">
-          <img src={image} alt={title} className="w-full h-full object-cover" />
+          <img src={image} alt={title} className="w-full h-full object-fit" />
         </div>
 
         {/* Content Section */}
