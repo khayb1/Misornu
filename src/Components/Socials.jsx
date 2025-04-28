@@ -22,7 +22,7 @@ const Socials = () => {
          animate="visible"
         //  whileHover={{ scale: 1.1 }}
         
-            className="flex justify-end items-end md:flex-col md:items-center md:fixed md:left-0 md:top-50 z-50 bg-gray-100">
+            className="flex justify-end items-end md:flex-col md:items-center md:fixed md:left-0 md:top-50 z-50 bg-gray-100 p-2">
           <motion.a 
                         whileHover={{ scale: 1.1 }}
                         href="https://facebook.com" 

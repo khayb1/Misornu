@@ -136,7 +136,7 @@ const Home = () => {
           
           </div>
           <div className="md:w-[45%] w-[100%] bg-white p-5 rounded-lg shadow-lg"  >
-            <h4 className="text-3x`xl font-bold text-center mb-5">Contact us</h4>
+            <h4 className="text-3xl font-bold text-center mb-5">Contact us</h4>
             <p className="text-center text-gray-500 mb-5">We work with ambitious leaders who want to define the future, not hide from it.</p>
           <Form />  
           </div>

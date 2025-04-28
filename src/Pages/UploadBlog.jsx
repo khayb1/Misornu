@@ -115,7 +115,7 @@ const UploadBlog = () => {
             <label className="block mb-2 text-sm font-medium w-fit">
               Upload Image (optional)
             </label>
-            <input type="file" accept="image/*" onChange={handleImageChange} />
+            <input type="url" accept="url/*" onChange={handleImageChange} className="border-1 " />
             {image && (
               <div className="mt-4 ">
                 <img

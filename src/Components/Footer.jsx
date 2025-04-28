@@ -1,13 +1,13 @@
-import React from 'react'
 import { Flogo } from '../assets';
 import { FaFacebook, FaInstagram, FaLinkedin, FaLocationPin, FaEnvelope, FaPhone, FaWhatsapp, FaYoutube } from 'react-icons/fa6';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { CiLogin } from "react-icons/ci";
 
 const Footer = () => {
   const date = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-800 text-white py-10">
+    <footer className="bg-gray-800 text-white py-10 relative">
       <div className="container mx-auto px-[10%]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Social Media */}
@@ -124,6 +124,11 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      <Link 
+        to={"/login"}
+        className='text-red bg-blue-500 p-2 w-fit absolute rounded-lg bottom-5 right-3 group'>
+        <CiLogin className='inline' size={20}/>
+      </Link>
     </footer>
   )
 }
